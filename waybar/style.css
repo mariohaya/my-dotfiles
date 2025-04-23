@@ -1,0 +1,38 @@
+* {
+	font-size: 14px;
+}
+
+window#waybar {
+	background: transparent;
+
+}
+
+#workspaces button {
+    background: transparent;
+    color: black;
+}
+
+#workspaces button.active{
+	color: white;
+	background: transparent; 
+  	border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#mpd {padding: 0 2px; margin: 0 4px;}
+#idle_inhibitor {padding: 0 2px; margin: 0 5px;}
+#pulseaudio {padding: 0 2px; margin: 0 4px;}
+#power-profiles-daemon {padding: 0 2px; margin: 0 4px;}
+#cpu {padding: 0 2px; margin: 0 4px;}
+#nm-applet {padding: 0 2px; margin: 0 4px;}
+#memory {padding: 0 2px; margin: 0 4px;}
+#temperature {padding: 0 2px; margin: 0 4px;}
+#backlight {padding: 0 2px; margin: 0 4px;}
+#keyboard-state {padding: 0 2px; margin: 0 4px;}
+#battery {padding: 0 2px; margin: 0 4px;}
+#battery#bat2 {padding: 0 2px; margin: 0 4px;}
+#tray {padding: 0 2px; margin: 0 3px;}
+#clock {padding: 0 2px; margin: 0 4px;}
