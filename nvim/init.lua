@@ -11,6 +11,8 @@ vim.wo.number = true
 vim.g.mapleader = ' '
 -- Example of setting an option
 vim.o.hlsearch = false
+-- Shows filename
+vim.o.statusline = "%t" 
 -- Yanking to Clipboard 
 vim.o.clipboard = "unnamedplus"
 vim.g.clipboard = {
