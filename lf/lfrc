@@ -1,0 +1,66 @@
+set shell sh
+
+### BINDS
+map K push :mkdir<space>
+map D delete
+map <esc> quit
+map r :rename; cmd-home # at the very beginning
+map R :rename # before extension
+map a rename-new # blank rename, extension included
+map . set hidden!
+map c clear
+map U extract
+map p paste
+
+### SHORTCUTS
+cmd config cd ~/.config
+map g1 $nvim ~/.config/lf/lfrc
+map g2 $nvim ~/.config/hypr/hyprland.conf
+map g3 $nvim ~/.config/nvim/init.lua
+map g4 $nvim ~/.config/mimeapps.list
+map ge cd ~/
+map gl cd ~/.config/lf
+map g. cd ~/.config/
+map gh cd ~/.config/hypr
+map gw cd ~/Downloads/
+map gp cd ~/Documents/Personal
+map gb cd ~/Books\ &\ Articles
+map gn cd ~/Documents/NCCU
+map gu cd ~/Documents/UIC/Application
+map gc cd ~/Documents/Personal/CV/
+map gt cd ~/Documents/NCCU/Thesis/
+map ga cd ~/Documents/NCCU/Thesis/Bibliography
+map gm cd ~/Movies
+map gd cd ~/
+map gy cd ~/.config/waybar
+
+### COMMANDS
+cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')" # Creates folder
+map e $nvim "$f"
+
+cmd extract ${{ # Unzips and extracts folders
+    set -f
+    case $f in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+        *.tar.gz|*.tgz) tar xzvf $f;;
+        *.tar.xz|*.txz) tar xJvf $f;;
+        *.zip) unzip $f;;
+        *.rar) unrar x $f;;
+        *.7z) 7z x $f;;
+    esac
+}}
+
+cmd rename-new &{{
+	if [ "$(echo "$fx" | wc -l)" -gt 1 ]; then
+		lf -remote "send $id echo You can't change more than one file name"
+		lf -remote "send $id unselect"
+	else
+		lf -remote "send $id rename"
+		lf -remote "send $id push <c-u>"
+	fi
+}}
+
+### VISUALS
+set drawbox true
+set icons true
+set ratios 1:4:2
