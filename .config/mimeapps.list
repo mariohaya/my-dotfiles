@@ -1,0 +1,37 @@
+[Added Associations]
+text/html=firefox-2.desktop;userapp-Firefox-8N8E52.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-0BS522.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-0BS522.desktop;
+x-scheme-handler/http=userapp-Firefox-8N8E52.desktop;
+x-scheme-handler/https=userapp-Firefox-8N8E52.desktop;
+x-scheme-handler/chrome=userapp-Firefox-8N8E52.desktop;
+application/x-extension-htm=userapp-Firefox-8N8E52.desktop;
+application/x-extension-html=userapp-Firefox-8N8E52.desktop;
+application/x-extension-shtml=userapp-Firefox-8N8E52.desktop;
+application/xhtml+xml=userapp-Firefox-8N8E52.desktop;
+application/x-extension-xhtml=userapp-Firefox-8N8E52.desktop;
+application/x-extension-xht=userapp-Firefox-8N8E52.desktop;
+
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop;
+image/*=org.kde.gwenview.desktop
+image/gif=org.kde.gwenview.desktop
+image/jpeg=org.kde.gwenview.desktop
+image/jpg=org.kde.gwenview.desktop
+image/png=org.kde.gwenview.desktop
+image/webp=firefox.desktop
+message/rfc822=userapp-Thunderbird-0BS522.desktop
+text/html=userapp-Firefox-8N8E52.desktop
+text/plain=nvim.desktop;
+x-scheme-handler/discord=vesktop.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-0BS522.desktop
+x-scheme-handler/mid=userapp-Thunderbird-0BS522.desktop
+x-scheme-handler/http=userapp-Firefox-8N8E52.desktop
+x-scheme-handler/https=userapp-Firefox-8N8E52.desktop
+x-scheme-handler/chrome=userapp-Firefox-8N8E52.desktop
+application/x-extension-htm=userapp-Firefox-8N8E52.desktop
+application/x-extension-html=userapp-Firefox-8N8E52.desktop
+application/x-extension-shtml=userapp-Firefox-8N8E52.desktop
+application/xhtml+xml=userapp-Firefox-8N8E52.desktop
+application/x-extension-xhtml=userapp-Firefox-8N8E52.desktop
+application/x-extension-xht=userapp-Firefox-8N8E52.desktop
