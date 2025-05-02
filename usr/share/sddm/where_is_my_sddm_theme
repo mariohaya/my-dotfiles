@@ -6,7 +6,7 @@ passwordMask=true
 # value "1" is all display width, "0.5" is a half of display width etc.
 passwordInputWidth=0.1
 # Background color of password input
-passwordInputBackground=
+passwordInputBackground=#474747
 # Radius of password input corners
 passwordInputRadius=
 # "true" for visible cursor, "false"
@@ -46,7 +46,7 @@ basicTextColor=#ffffff
 blurRadius=0
 
 # Hide cursor
-hideCursor=false
+hideCursor=true
 
 # Default font
 font=monospace
