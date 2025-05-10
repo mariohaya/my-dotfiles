@@ -13,4 +13,14 @@ export LF_ICONS="*.srt=󰨖:*.conf=:*.ods=󰈛:*.txt=:*.odt=󰈬:*.epub=�
 
 #!/bin/sh
 
+lf () {
+    tmp="$(mktemp)"
+    command lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+    rm -f "$tmp"
+}
+
 lf
