@@ -60,6 +60,8 @@ cmd rename-new &{{
 	fi
 }}
 
+map o $read -p "Filename: " fname; nvim "$fname"
+
 ### VISUALS
 set drawbox true
 set icons true
