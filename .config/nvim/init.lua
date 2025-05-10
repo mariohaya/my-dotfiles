@@ -51,6 +51,11 @@ vim.api.nvim_set_keymap('n', '<leader>l', ':CompileLatex<CR>', { noremap = true,
 
 --------- COLORS
 vim.o.termguicolors = true  -- Enable true color support
+vim.cmd([[
+  highlight StatusLine guifg=#FFA500 guibg=#005f87
+  highlight StatusLineNC guifg=#FFA500 guibg=#303030]])
+
+
 -- Make the background of Neovim transparent
 vim.cmd('highlight Normal guibg=NONE')  -- Set the background of normal text to transparent
 vim.cmd('highlight NonText guibg=NONE')  -- Set non-text elements (e.g., trailing spaces) transparent
