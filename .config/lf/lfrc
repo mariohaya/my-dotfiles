@@ -18,6 +18,8 @@ map g1 $nvim ~/.config/lf/lfrc
 map g2 $nvim ~/.config/hypr/hyprland.conf
 map g3 $nvim ~/.config/nvim/init.lua
 map g4 $nvim ~/.config/mimeapps.list
+map g5 $nvim ~/.bashrc
+map gz cd ~/.config/zathura/
 map ge cd ~/
 map gl cd ~/.config/lf
 map g. cd ~/.config/
@@ -26,13 +28,17 @@ map gw cd ~/Downloads/
 map gp cd ~/Documents/Personal
 map gb cd ~/Books\ &\ Articles
 map gn cd ~/Documents/NCCU
-map gu cd ~/Documents/UIC/Application
-map gc cd ~/Documents/Personal/CV/
-map gt cd ~/Documents/NCCU/Thesis/
+map gu cd ~/Documents/UIC/Application\ Documents
 map ga cd ~/Documents/NCCU/Thesis/Bibliography
 map gm cd ~/Movies
-map gd cd ~/
+map gd cd ~/Documents
 map gy cd ~/.config/waybar
+map gc cd ~/Documents/NCCU/2025-01/Business\ Chinese
+map g` cd ~/Pictures/Wallpapers/
+map gv cd ~/.config/nvim/
+map go cd ~/Main\ Vault/.obsidian
+map gP cd ~/Pictures
+map gt cd ~/Documents/NCCU/Thesis/Oral\ Defense\ Presentation
 
 ### COMMANDS
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')" # Creates folder
