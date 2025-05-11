@@ -15,6 +15,21 @@ vim.g.mapleader = ' '
 vim.o.hlsearch = false
 -- Shows filename
 vim.o.statusline = "%F %m" 
+-- Copy current directory to clipboard with !cdir or <leader>c
+vim.api.nvim_create_user_command('Cdir', function()
+  vim.fn.setreg('+', vim.fn.expand('%:p:h'))
+end, {})
+
+vim.cmd('cnoreabbrev cdir Cdir')
+vim.keymap.set('n', '\\c', function()
+  vim.fn.setreg('+', vim.fn.expand('%:p:h'))
+  print('Directory copied to clipboard')
+end, { desc = 'Copy current file directory to clipboard' })
+--
+vim.api.nvim_create_user_command('Yall', function()
+  vim.cmd('normal! gg"+yG')
+end, { desc = 'Copy entire file to clipboard' })
+
 
 
 ----- Yanking to Clipboard 
@@ -54,7 +69,6 @@ vim.o.termguicolors = true  -- Enable true color support
 vim.cmd([[
   highlight StatusLine guifg=#FFA500 guibg=#005f87
   highlight StatusLineNC guifg=#FFA500 guibg=#303030]])
-
 
 -- Make the background of Neovim transparent
 vim.cmd('highlight Normal guibg=NONE')  -- Set the background of normal text to transparent
