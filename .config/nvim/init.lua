@@ -15,21 +15,16 @@ vim.g.mapleader = ' '
 vim.o.hlsearch = false
 -- Shows filename
 vim.o.statusline = "%F %m" 
--- Copy current directory to clipboard with !cdir or <leader>c
-vim.api.nvim_create_user_command('Cdir', function()
-  vim.fn.setreg('+', vim.fn.expand('%:p:h'))
-end, {})
-
-vim.cmd('cnoreabbrev cdir Cdir')
-vim.keymap.set('n', '\\c', function()
+---------------------
+vim.keymap.set('n', '\\d', function()
   vim.fn.setreg('+', vim.fn.expand('%:p:h'))
   print('Directory copied to clipboard')
 end, { desc = 'Copy current file directory to clipboard' })
---
-vim.api.nvim_create_user_command('Yall', function()
-  vim.cmd('normal! gg"+yG')
-end, { desc = 'Copy entire file to clipboard' })
 
+vim.keymap.set('n', '\\y', function()
+  vim.cmd('normal! gg"+yG')
+  print('Entire file copied to clipboard')
+end, { desc = 'Yank entire file to clipboard' })
 
 
 ----- Yanking to Clipboard 
