@@ -7,6 +7,7 @@ map <esc> quit
 map r :rename; cmd-home # at the very beginning
 map R :rename # before extension
 map a rename-new # blank rename, extension included
+map A :rename; cmd-end; cmd-delete-home # blank rename
 map . set hidden!
 map c clear
 map U extract
@@ -20,7 +21,7 @@ map g3 $nvim ~/.config/nvim/init.lua
 map g4 $nvim ~/.config/mimeapps.list
 map g5 $nvim ~/.bashrc
 map gz cd ~/.config/zathura/
-map ge cd ~/
+map gq cd ~/
 map gl cd ~/.config/lf
 map g. cd ~/.config/
 map gh cd ~/.config/hypr
@@ -42,7 +43,9 @@ map gt cd ~/Documents/NCCU/Thesis/Oral\ Defense\ Presentation
 
 ### COMMANDS
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')" # Creates folder
-map e $nvim "$f"
+
+map e $nvim "$f" # Edit file with nvim
+
 
 cmd extract ${{ # Unzips and extracts folders
     set -f
@@ -56,7 +59,7 @@ cmd extract ${{ # Unzips and extracts folders
     esac
 }}
 
-cmd rename-new &{{
+cmd rename-new &{{ # rename
 	if [ "$(echo "$fx" | wc -l)" -gt 1 ]; then
 		lf -remote "send $id echo You can't change more than one file name"
 		lf -remote "send $id unselect"
@@ -66,7 +69,24 @@ cmd rename-new &{{
 	fi
 }}
 
-map o $read -p "Filename: " fname; nvim "$fname"
+
+map E $read -p "Filename: " fname; nvim "$fname" # Create file with nvim
+
+map Yp yank_path
+cmd yank_path ${{ # Yank paths
+set -f
+for file in "$fx"; do
+  readlink -f "$file"
+done | wl-copy
+}}
+
+map Yn yank_name # Yank filename
+cmd yank_name ${{
+set -f
+for file in "$fx"; do
+  basename "$file"
+done | wl-copy
+}}
 
 ### VISUALS
 set drawbox true
