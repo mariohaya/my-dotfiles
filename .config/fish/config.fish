@@ -8,9 +8,6 @@ alias update 'sudo pacman -Syu'
 alias cache 'sudo pacman -Scc'
 alias storage='df -h /'
 
-# Prompt (Fish uses its own prompt system, so this is optional)
-# To set a custom prompt you can use fish functions instead. For now, use the default Fish prompt or customize via `fish_config prompt`.
-
 set fish_greeting
 
 # LF_ICONS environment variable
@@ -29,6 +26,6 @@ function lf
     rm -f "$tmp"
 end
 
-# Automatically run lf on shell start (optional, remove if not desired)
+# always start lf
 lf
 
