@@ -1,0 +1,30 @@
+[global]
+font = Source Code Pro 10
+transparency = 10
+frame_color = "#928374"
+separator_color = frame
+padding = 8
+horizontal_padding = 8
+frame_width = 2
+separator_height = 2
+corner_radius = 7
+idle_threshold = 800
+line_height = 0
+
+[urgency_low]
+background = "#282828"
+foreground = "#a89984"
+frame_color = "#3c3836"
+timeout = 80
+
+[urgency_normal]
+background = "#282828"
+foreground = "#ebdbb2"
+frame_color = "#d5c4a1"
+timeout = 80
+
+[urgency_critical]
+background = "#cc241d"
+foreground = "#fbf1c7"
+frame_color = "#fb4934"
+timeout = 120
