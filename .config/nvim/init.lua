@@ -1,13 +1,6 @@
 ----------- Initialize Packer -----------
 require('packer').startup(function(use)
-  use 'nvim-treesitter/nvim-treesitter'
 end)
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "lua", "python", "javascript", "latex"}, -- languages
-  highlight = { enable = true },
-  incremental_selection = { enable = true },
-  textobjects = { enable = true },
-}
 
 ----------- Custom Keybinds -----------
 vim.api.nvim_create_user_command('W', 'w', {})
@@ -16,12 +9,11 @@ vim.api.nvim_create_user_command('WQ', 'wq', {})
 vim.api.nvim_create_user_command('Wq', 'wq', {})
 vim.keymap.set('n', 'a', 'I', { noremap = true })
 vim.keymap.set('n', 'I', 'a', { noremap = true })
-vim.g.mapleader = ' ' -- Set the leader key to space
 
 ----------- Custom configs -----------
 vim.o.clipboard = "unnamedplus" -- Yanking to Clipboard (Wayland)
 vim.g.clipboard = {
-    name = "wl-clipboard",
+    name = "wl-clipboard", 
     copy = { ["+"] = "wl-copy", ["*"] = "wl-copy" },
     paste = { ["+"] = "wl-paste", ["*"] = "wl-paste" },
     cache_enabled = 1,}
@@ -61,3 +53,7 @@ vim.cmd([[
  vim.cmd('highlight StatusLine guibg=NONE') -- status line bg
  vim.cmd('highlight TabLine guibg=NONE') -- tab line bg
 
+----------- Installation -----------
+ --- git clone --depth 1 https://github.com/wbthomason/packer.nvim \ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+ --- use 'morhetz/gruvbox'
+ --- :PackerSync
