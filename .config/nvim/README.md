@@ -4,7 +4,8 @@
 :PackerSync
 
 ## gruvbox
-use 'morhetz/gruvbox'
+  use 'wbthomason/packer.nvim'
+  use 'ellisonleao/gruvbox.nvim'
 
 # Latexmk (now texlive-binextra) 
 https://archlinux.org/packages/extra/any/texlive-binextra/
