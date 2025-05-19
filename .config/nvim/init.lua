@@ -52,8 +52,3 @@ vim.cmd([[
  vim.cmd('highlight LineNr guibg=NONE') -- line no.
  vim.cmd('highlight StatusLine guibg=NONE') -- status line bg
  vim.cmd('highlight TabLine guibg=NONE') -- tab line bg
-
------------ Installation -----------
- --- git clone --depth 1 https://github.com/wbthomason/packer.nvim \ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
- --- use 'morhetz/gruvbox'
- --- :PackerSync
