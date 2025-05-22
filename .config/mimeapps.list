@@ -11,6 +11,7 @@ application/x-extension-shtml=userapp-Firefox-8N8E52.desktop;
 application/xhtml+xml=userapp-Firefox-8N8E52.desktop;
 application/x-extension-xhtml=userapp-Firefox-8N8E52.desktop;
 application/x-extension-xht=userapp-Firefox-8N8E52.desktop;
+video/mp4=mpv.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop;
@@ -35,3 +36,6 @@ application/x-extension-shtml=userapp-Firefox-8N8E52.desktop
 application/xhtml+xml=userapp-Firefox-8N8E52.desktop
 application/x-extension-xhtml=userapp-Firefox-8N8E52.desktop
 application/x-extension-xht=userapp-Firefox-8N8E52.desktop
+video/mp4=mpv.desktop
+
+
