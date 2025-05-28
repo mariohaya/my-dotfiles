@@ -10,8 +10,9 @@ map a rename-new # blank rename, extension included
 map A :rename; cmd-end; cmd-delete-home # blank rename
 map . set hidden!
 map c clear
-map U extract
 map p paste
+map [ top
+map ] bottom
 
 ### SHORTCUTS
 cmd config cd ~/.config
@@ -19,35 +20,39 @@ map g1 $nvim ~/.config/lf/lfrc
 map g2 $nvim ~/.config/hypr/hyprland.conf
 map g3 $nvim ~/.config/nvim/init.lua
 map g4 $nvim ~/.config/mimeapps.list
-map g5 $nvim ~/.bashrc
+map g5 $nvim ~/.config/fish/config.fish
 map gz cd ~/.config/zathura/
 map gq cd ~/
 map gl cd ~/.config/lf
+map gk cd ~/.config/kitty
 map g. cd ~/.config/
 map gh cd ~/.config/hypr
 map gw cd ~/Downloads/
 map gp cd ~/Documents/Personal
 map gb cd ~/Books\ &\ Articles
 map gn cd ~/Documents/NCCU
-map gu cd ~/Documents/UIC/Application\ Documents
+map gu cd ~/Documents/UIC/
 map ga cd ~/Documents/NCCU/Thesis/Bibliography
 map gm cd ~/Movies
-map gd cd ~/Documents
+map gM cd ~/Music
+map gd cd ~/MyDrive
 map gy cd ~/.config/waybar
 map gc cd ~/Documents/NCCU/2025-01/Business\ Chinese
 map g` cd ~/Pictures/Wallpapers/
 map gv cd ~/.config/nvim/
 map go cd ~/Main\ Vault/.obsidian
 map gP cd ~/Pictures
-map gt cd ~/Documents/NCCU/Thesis/Oral\ Defense\ Presentation
+map gt cd ~/Documents/NCCU/Thesis/Draft\ (LaTeX)
+map gf cd ~/.config/fish/
 
 ### COMMANDS
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')" # Creates folder
 
 map e $nvim "$f" # Edit file with nvim
+map E $nvim "$f" # Edit file with nvim
 
-
-cmd extract ${{ # Unzips and extracts folders
+map U extract # Unzips and extracts folders
+cmd extract ${{ 
     set -f
     case $f in
         *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
@@ -69,8 +74,7 @@ cmd rename-new &{{ # rename
 	fi
 }}
 
-
-map E $read -p "Filename: " fname; nvim "$fname" # Create file with nvim
+map N $read -p "Filename: " fname; nvim "$fname" # Create file with nvim
 
 map Yp yank_path
 cmd yank_path ${{ # Yank paths
@@ -91,4 +95,5 @@ done | wl-copy
 ### VISUALS
 set drawbox true
 set icons true
-set ratios 1:4:2
+set ratios 1:4:3
+set previewer ~/.config/lf/preview.sh
