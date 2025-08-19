@@ -10,6 +10,7 @@ separator_height = 2
 corner_radius = 7
 idle_threshold = 800
 line_height = 0
+timeout = 10
 
 [urgency_low]
 background = "#282828"
