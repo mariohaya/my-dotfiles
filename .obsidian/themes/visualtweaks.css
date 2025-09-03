@@ -1,0 +1,9 @@
+/* Remove vertical line from nested bullet lists in Reading mode */
+.markdown-preview-view ul ul {
+  border-left: none !important;
+}
+
+/* Remove vertical line from nested bullet lists in Live Preview */
+.markdown-source-view.mod-cm6 .cm-indent::before {
+  border-left: none !important;
+}
