@@ -12,6 +12,10 @@ application/xhtml+xml=userapp-Firefox-8N8E52.desktop;
 application/x-extension-xhtml=userapp-Firefox-8N8E52.desktop;
 application/x-extension-xht=userapp-Firefox-8N8E52.desktop;
 video/mp4=mpv.desktop;
+video/webm=mpv.desktop;
+text/x-R-source=rstudio.desktop;
+application/x-R=rstudio.desktop;
+application/x-extension-R=rstudio.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop;
@@ -37,5 +41,16 @@ application/xhtml+xml=userapp-Firefox-8N8E52.desktop
 application/x-extension-xhtml=userapp-Firefox-8N8E52.desktop
 application/x-extension-xht=userapp-Firefox-8N8E52.desktop
 video/mp4=mpv.desktop
-
-
+video/webm=mpv.desktop
+text/csv=libreoffice-calc.desktop
+application/csv=libreoffice-calc.desktop
+application/vnd.ms-excel=libreoffice-calc.desktop
+application/x-extension-csv=libreoffice-calc.desktop
+text/x-R-source=rstudio.desktop
+application/x-R=rstudio.desktop
+text/plain=nvim.dekstop;
+application/x-extension-R=rstudio.desktop
+application/x-r=rstudio.desktop
+text/x-r-source=rstudio.desktop
+application/x-r=rstudio.desktop
+application/x-extension-r=rstudio.desktop
