@@ -11,6 +11,11 @@ alias storage='df -h /'
 alias blue 'pkill gammastep'
 alias red 'gammastep'
 
+function wallup
+    pkill hyprpaper
+    hyprpaper & disown
+end
+
 set fish_greeting
 
 # LF_ICONS environment variable
