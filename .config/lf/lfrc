@@ -16,11 +16,11 @@ map ] bottom
 
 ### SHORTCUTS
 cmd config cd ~/.config
-map g1 $nvim ~/.config/lf/lfrc
-map g2 $nvim ~/.config/hypr/hyprland.conf
-map g3 $nvim ~/.config/nvim/init.lua
-map g4 $nvim ~/.config/mimeapps.list
-map g5 $nvim ~/.config/fish/config.fish
+#map g1 $nvim ~/.config/lf/lfrc
+#map g2 $nvim ~/.config/hypr/hyprland.conf
+#map g3 $nvim ~/.config/nvim/init.lua
+#map g4 $nvim ~/.config/mimeapps.list
+#map g5 $nvim ~/.config/fish/config.fish
 map gz cd ~/.config/zathura/
 map gq cd ~/
 map gl cd ~/.config/lf
@@ -28,21 +28,23 @@ map gk cd ~/.config/kitty
 map g. cd ~/.config/
 map gh cd ~/.config/hypr
 map gw cd ~/Downloads/
-map gp cd ~/Documents/Personal
+map gpe cd ~/Documents/Personal
+map gpc cd ~/Documents/Personal/CV\ Resume
 map gb cd ~/Books\ &\ Articles
-map gn cd ~/Documents/NCCU
-map gu cd ~/Documents/UIC/
-map ga cd ~/Documents/NCCU/Thesis/Bibliography
-map gm cd ~/Movies
-map gM cd ~/Music
+map g1 cd ~/Documents/UIC/Fall\ 2025/FIN510\ Investments
+map g2 cd ~/Documents/UIC/Fall\ 2025/FIN515\ Fixed\ Income\ Securities
+map g3 cd ~/Documents/UIC/Fall\ 2025/IDS575\ ML\ Business\ Analytics
+map gmo cd ~/Movies
+map gmu cd ~/Music
 map gd cd ~/MyDrive
 map gy cd ~/.config/waybar
-map gc cd ~/Documents/NCCU/2025-01/Business\ Chinese
-map g` cd ~/Pictures/Wallpapers/
+map gc cd ~/Documents/CFA
+map gW cd ~/Pictures/Wallpapers/
 map gv cd ~/.config/nvim/
 map go cd ~/Main\ Vault/.obsidian
-map gP cd ~/Pictures
-map gt cd ~/Documents/NCCU/Thesis/Draft\ (LaTeX)
+map gps cd ~/Pictures/Screenshots
+map gpp cd ~/Pictures
+map gt cd ~/Documents/NCCU/Thesis/TeX\ Draft\ (August\ 03\ Version)
 map gf cd ~/.config/fish/
 
 ### COMMANDS
