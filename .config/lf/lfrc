@@ -1,5 +1,5 @@
 set shell sh
-set statfmt "Size: %s. Last Modified: %t"
+set statfmt "Last Modified: %t ~ Size: %s"
 
 ### BINDS
 map K push :mkdir<space>
@@ -32,11 +32,12 @@ map gw cd ~/Downloads/
 map gpe cd ~/Documents/Personal
 map gpc cd ~/Documents/Personal/CV\ Resume
 map gb cd ~/Books\ &\ Articles
-map g1 cd ~/Documents/UIC/Fall\ 2025/FIN510\ Investments
-map g2 cd ~/Documents/UIC/Fall\ 2025/FIN515\ Fixed\ Income\ Securities
-map g3 cd ~/Documents/UIC/Fall\ 2025/IDS575\ ML\ Business\ Analytics
+map gu cd ~/Documents/UIC/Spring\ 2026
+map g1 cd ~/Documents/UIC/Spring\ 2026/FIN\ 512\ Portfolio\ Analysis
+map g2 cd ~/Documents/UIC/Spring\ 2026/FIN\ 516\ Options\ and\ Futures\ Markets
+map g3 cd ~/Documents/UIC/Spring\ 2026/FIN\ 523\ Financial\ Modeling
 map gmo cd ~/Movies
-map gmu cd ~/Music
+map gmu cd ~/MyDrive/Music
 map gd cd ~/MyDrive
 map gy cd ~/.config/waybar
 map gc cd ~/Documents/CFA
