@@ -10,6 +10,7 @@ alias cache 'sudo pacman -Scc'
 alias storage='df -h /'
 alias blue 'pkill gammastep'
 alias red 'gammastep'
+alias thispc 'cat /sys/devices/virtual/dmi/id/product_name'
 
 function wallup
     pkill hyprpaper
