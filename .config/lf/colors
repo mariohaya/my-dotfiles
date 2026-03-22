@@ -212,6 +212,7 @@ fi      00      # FILE
 *.nvim 38;5;78
 *.json 38;5;218
 *.yaml 38;5;226
+*.toml 38;5;51
 
 
 # Bash
