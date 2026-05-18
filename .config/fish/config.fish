@@ -11,6 +11,7 @@ alias storage='df -h /'
 alias blue 'pkill gammastep'
 alias red 'gammastep'
 alias thispc 'cat /sys/devices/virtual/dmi/id/product_name'
+alias pape 'pkill hyprpaper; nohup hyprpaper >/dev/null 2>&1 &'
 
 function wallup
     pkill hyprpaper
