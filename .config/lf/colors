@@ -196,9 +196,9 @@ fi      00      # FILE
 *.scala  38;5;196
 *.rb     38;5;196
 *.vim    32
-*.sql    38;5;249
-*.sqlite 38;5;249
-*.db     38;5;249
+*.sql    38;5;208
+*.sqlite 38;5;208
+*.db     38;5;208
 *.odb    38;5;249
 *.apk    38;5;82
 *.apk    38;5;82
@@ -241,10 +241,8 @@ fi      00      # FILE
 *.xml 38;5;242
 *.bcf 38;5;242
 
-
-
 # Obsidian
-*.md 38;5;183
+*.md 38;5;208
 '/home/mario/Main Vault' 38;5;129
 
 # Directories
