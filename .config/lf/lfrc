@@ -10,7 +10,7 @@ map R :rename # before extension
 map a rename-new # blank rename, extension included
 map A :rename; cmd-end; cmd-delete-home # blank rename
 map . set hidden!
-map c clear
+map c unselect
 map p paste
 map [ top
 map ] bottom
