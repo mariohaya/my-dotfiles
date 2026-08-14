@@ -1,5 +1,5 @@
 set shell sh
-set statfmt "Last Modified: %t ~ Size: %s"
+# set statfmt "Last Modified: %t ~ Size: %s"
 
 ### BINDS
 map K push :mkdir<space>
