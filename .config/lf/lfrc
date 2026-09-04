@@ -39,6 +39,7 @@ map g3 cd ~/Documents/UIC/Spring\ 2026/FIN\ 523\ Financial\ Modeling
 map gmo cd ~/Movies
 map gmu cd ~/MyDrive/Music
 map gd cd ~/MyDrive
+map gd cd ~/Documents
 map gy cd ~/.config/waybar
 map gc cd ~/Documents/CFA
 map gW cd ~/Pictures/Wallpapers/
