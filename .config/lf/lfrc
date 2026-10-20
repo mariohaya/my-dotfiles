@@ -28,14 +28,17 @@ map gl cd ~/.config/lf
 map gk cd ~/.config/kitty
 map g. cd ~/.config/
 map gh cd ~/.config/hypr
+map gr cd ~/.config/rofi
 map gw cd ~/Downloads/
 map gpe cd ~/Documents/Personal
 map gpc cd ~/Documents/Personal/CV\ Resume
+map gP cd ~/Documents/Projects
 map gb cd ~/Books\ &\ Articles
 map gu cd ~/Documents/UIC/Spring\ 2026
 map g1 cd ~/Documents/UIC/Spring\ 2026/FIN\ 512\ Portfolio\ Analysis
 map g2 cd ~/Documents/UIC/Spring\ 2026/FIN\ 516\ Options\ and\ Futures\ Markets
 map g3 cd ~/Documents/UIC/Spring\ 2026/FIN\ 523\ Financial\ Modeling
+map gM cd ~/Main\ Vault/.obsidian/themes
 map gmo cd ~/Movies
 map gmu cd ~/MyDrive/Music
 map gd cd ~/MyDrive
