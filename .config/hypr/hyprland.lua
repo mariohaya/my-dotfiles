@@ -152,6 +152,7 @@ local mainMod = "SUPER"
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + RETURN", hl.dsp.window.fullscreen())
+hl.bind(mainMod .. " + KP_Enter", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + T", hl.dsp.layout("togglesplit"))
 
