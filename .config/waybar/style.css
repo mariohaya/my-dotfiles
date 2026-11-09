@@ -31,13 +31,13 @@ window#waybar {
 #pulseaudio {padding: 0 2px; margin: 0 4px; color: #e0e2e8;}
 #power-profiles-daemon {padding: 0 2px; margin: 0 4px; color: #e0e2e8;}
 #cpu {padding: 0 2px; margin: 0 4px; color: #e0e2e8;}
-#nm-applet {padding: 0 2px; margin: 0 4px; color: #e0e2e8;}
+#nm-applet {padding: 0 2px; margin: 0 2px; color: #e0e2e8;}
 #memory {padding: 0 2px; margin: 0 4px; color: #e0e2e8;}
-#temperature {padding: 0 2px; margin: 0 4px; color: #e0e2e8;}
+#temperature {padding: 0 0px; margin: 0 4px; color: #e0e2e8;}
 #backlight {padding: 0 2px; margin: 0 4px; color: #e0e2e8;}
 #keyboard-state {padding: 0 2px; margin: 0 4px; color: #e0e2e8;}
-#battery {padding: 0 2px; margin: 0 4px; color: #e0e2e8;}
-#battery.bat2 {padding: 0 2px; margin: 0 4px; color: #e0e2e8;}
+#battery {padding: 0 2px; margin: 0 2px; color: #e0e2e8;}
+#battery.bat2 {padding: 0 2px; margin: 0 2px; color: #e0e2e8;}
 #tray {padding: 0 2px; margin: 0 3px; color: #e0e2e8;}
 #clock {padding: 0 2px; margin: 0 3px; color: #e0e2e8;}
-
+#custom-media {color: #e0e2e8; margin: 0 2px;}
