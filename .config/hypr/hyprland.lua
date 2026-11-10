@@ -7,15 +7,16 @@
 -- Monitors and cursor
 ------------------------------
 -- Use the preferred mode for any connected display, at 1x scale.
-hl.monitor({
-    output = "",
-    mode = "preferred",
-    position = "auto",
-    scale = 1,
-})
-
 hl.config({
-    cursor = { no_hardware_cursors = 1 },
+    cursor = {
+        no_hardware_cursors = 1,
+    },
+    binds = {
+        client_requested_fs_uses_layout_handler = false,
+    },
+    render = {
+        cm_auto_hdr = 0,
+    },
 })
 
 ------------------------------
