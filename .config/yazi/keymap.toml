@@ -1,0 +1,86 @@
+# ~/.config/yazi/keymap.toml
+# Migrated from your lf/lfrc; Yazi's default keybindings remain available.
+
+[mgr]
+prepend_keymap = [
+  # File operations and navigation
+  { on = "<Esc>", run = "quit", desc = "Quit Yazi (as in lf)" },
+  { on = "K", run = "create --dir", desc = "Create directory" },
+  { on = "Y", run = "remove", desc = "Move selected files to Trash" },
+  { on = "D", run = "remove --permanently", desc = "Permanently delete selected files" },
+  { on = "r", run = "rename --hovered --cursor=start", desc = "Rename from beginning" },
+  { on = "R", run = "rename --hovered --cursor=before_ext", desc = "Rename before extension" },
+  { on = "a", run = "rename --hovered --empty=all", desc = "Rename hovered file from scratch" },
+  { on = "A", run = "rename --empty=all", desc = "Rename selection from scratch" },
+  { on = ".", run = "hidden toggle", desc = "Toggle hidden files" },
+  { on = "c", run = "escape --select", desc = "Clear selections" },
+  { on = "p", run = "paste", desc = "Paste files" },
+  { on = "[", run = "arrow top", desc = "Go to first file" },
+  { on = "]", run = "arrow bot", desc = "Go to last file" },
+
+  { on = "w", run = [ "refresh", "peek --force" ], desc = "Refresh file list and preview" },
+  { on = "W", run = "tasks:show", desc = "Show task manager" },
+
+  # Sort files: press lowercase s, then a letter. Uppercase second letter reverses the order.
+  { on = [ "s", "m" ], run = [ "sort mtime --reverse=no", "linemode mtime" ], desc = "Sort by modification time" },
+  { on = [ "s", "M" ], run = [ "sort mtime --reverse=yes", "linemode mtime" ], desc = "Sort by modification time (reverse)" },
+  { on = [ "s", "c" ], run = [ "sort btime --reverse=no", "linemode btime" ], desc = "Sort by creation time (oldest first)" },
+  { on = [ "s", "C" ], run = [ "sort btime --reverse=yes", "linemode btime" ], desc = "Sort by creation time (newest first)" },
+  { on = [ "s", "e" ], run = "sort extension --reverse=no", desc = "Sort by extension" },
+  { on = [ "s", "E" ], run = "sort extension --reverse=yes", desc = "Sort by extension (reverse)" },
+  { on = [ "s", "a" ], run = "sort alphabetical --reverse=no", desc = "Sort alphabetically" },
+  { on = [ "s", "A" ], run = "sort alphabetical --reverse=yes", desc = "Sort alphabetically (reverse)" },
+  { on = [ "s", "n" ], run = "sort natural --reverse=no", desc = "Sort naturally (1, 2, 10)" },
+  { on = [ "s", "N" ], run = "sort natural --reverse=yes", desc = "Sort naturally (reverse)" },
+  { on = [ "s", "s" ], run = [ "sort size --reverse=no", "linemode size" ], desc = "Sort by size" },
+  { on = [ "s", "S" ], run = [ "sort size --reverse=yes", "linemode size" ], desc = "Sort by size (reverse)" },
+  { on = [ "s", "r" ], run = "sort random --reverse=no", desc = "Sort randomly" },
+  { on = [ "s", "0" ], run = "sort none --reverse=no", desc = "Disable sorting" },
+  { on = [ "s", "d" ], run = "sort --dir-first=yes", desc = "Show directories first" },
+  { on = [ "s", "D" ], run = "sort --dir-first=no", desc = "Mix directories with files" },
+  # Uppercase S searches file names via fd; F searches contents via ripgrep.
+  { on = "S", run = "search --via=fd", desc = "Search filenames via fd" },
+  { on = "F", run = "search --via=rg", desc = "Search file contents via ripgrep" },
+
+  # Personal directory shortcuts (from lf)
+  { on = [ "g", "z" ], run = "cd ~/.config/zathura", desc = "Zathura config" },
+  { on = [ "g", "q" ], run = "cd ~", desc = "Home" },
+  { on = [ "g", "l" ], run = "cd ~/.config/yazi", desc = "Yazi config (formerly lf)" },
+  { on = [ "g", "k" ], run = "cd ~/.config/kitty", desc = "Kitty config" },
+  { on = [ "g", "." ], run = "cd ~/.config", desc = "All configuration files" },
+  { on = [ "g", "h" ], run = "cd ~/.config/hypr", desc = "Hyprland config" },
+  { on = [ "g", "r" ], run = "cd ~/.config/rofi", desc = "Rofi config" },
+  { on = [ "g", "w" ], run = "cd ~/Downloads", desc = "Downloads" },
+  { on = [ "g", "i" ], run = "cd ~/Documents/Inquimicol", desc = "Inquimicol" },
+  { on = [ "g", "p", "e" ], run = "cd ~/Documents/Personal", desc = "Personal" },
+  { on = [ "g", "p", "c" ], run = 'cd "~/Documents/Personal/CV Resume"', desc = "CV Resume" },
+  { on = [ "g", "P" ], run = "cd ~/Documents/Projects", desc = "Projects" },
+  { on = [ "g", "b" ], run = 'cd "~/Books & Articles"', desc = "Books & Articles" },
+  { on = [ "g", "u" ], run = 'cd "~/Documents/UIC/Spring 2026"', desc = "UIC Spring 2026" },
+  { on = [ "g", "1" ], run = 'cd "~/Documents/UIC/Spring 2026/FIN 512 Portfolio Analysis"', desc = "FIN 512" },
+  { on = [ "g", "2" ], run = 'cd "~/Documents/UIC/Spring 2026/FIN 516 Options and Futures Markets"', desc = "FIN 516" },
+  { on = [ "g", "3" ], run = 'cd "~/Documents/UIC/Spring 2026/FIN 523 Financial Modeling"', desc = "FIN 523" },
+  { on = [ "g", "M" ], run = 'cd "~/Main Vault/.obsidian/themes"', desc = "Obsidian themes" },
+  { on = [ "g", "m", "o" ], run = "cd ~/Movies", desc = "Movies" },
+  { on = [ "g", "m", "u" ], run = "cd ~/MyDrive/Music", desc = "Music" },
+  { on = [ "g", "d" ], run = "cd ~/MyDrive", desc = "Google Drive" },
+  { on = [ "g", "D" ], run = "cd ~/Documents", desc = "Documents" },
+  { on = [ "g", "y" ], run = "cd ~/.config/waybar", desc = "Waybar config" },
+  { on = [ "g", "c" ], run = "cd ~/Documents/CFA", desc = "CFA" },
+  { on = [ "g", "W" ], run = "cd ~/Pictures/Wallpapers", desc = "Wallpapers" },
+  { on = [ "g", "v" ], run = "cd ~/.config/nvim", desc = "Neovim config" },
+  { on = [ "g", "o" ], run = 'cd "~/Main Vault/.obsidian"', desc = "Obsidian config" },
+  { on = [ "g", "p", "s" ], run = "cd ~/Pictures/Screenshots", desc = "Screenshots" },
+  { on = [ "g", "p", "p" ], run = "cd ~/Pictures", desc = "Pictures" },
+  { on = [ "g", "f" ], run = "cd ~/.config/fish", desc = "Fish config" },
+
+  # Neovim and archives
+  { on = "e", run = "shell --block -- nvim %h", desc = "Edit hovered file in Neovim" },
+  { on = "E", run = "shell --block -- nvim %h", desc = "Edit hovered file in Neovim" },
+  { on = "U", run = "open --hovered", desc = "Open hovered file (extract archives)" },
+  { on = "N", run = '''shell --block -- sh -c 'printf "Filename: "; IFS= read -r name; [ -n "$name" ] && nvim -- "$name"' ''', desc = "Create/edit new file in Neovim" },
+
+  # Copy paths: moved from Yp/Yn to Cp/Cn, since Y now means Trash.
+  { on = [ "C", "p" ], run = "copy path", desc = "Copy absolute file path" },
+  { on = [ "C", "n" ], run = "copy filename", desc = "Copy filename" },
+]
