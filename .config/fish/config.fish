@@ -12,7 +12,7 @@ alias blue 'pkill gammastep'
 alias red 'gammastep'
 alias thispc 'cat /sys/devices/virtual/dmi/id/product_name'
 alias pape 'pkill hyprpaper; nohup hyprpaper >/dev/null 2>&1 &'
-alias pazi 'yazi'
+alias p 'yazi'
 
 
 function waystart
@@ -30,7 +30,7 @@ end
 set fish_greeting
 
 # Yazi wrapper: preserve directory on exit
-function y
+function p
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
     command yazi $argv --cwd-file="$tmp"
 
@@ -46,6 +46,6 @@ end
 # Automatically start Yazi in new terminals
 if status is-interactive; and not set -q AUTO_YAZI_ACTIVE
     set -gx AUTO_YAZI_ACTIVE 1
-    y
+    p
     set -e AUTO_YAZI_ACTIVE
 end
