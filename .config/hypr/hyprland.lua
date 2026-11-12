@@ -216,6 +216,7 @@ hl.bind("PRINT", hl.dsp.exec_cmd("HYPRSHOT_DIR=~/Pictures/Screenshots hyprshot -
 
 -- Overskride only opens on demand; no window at login.
 hl.bind("SUPER + B", hl.dsp.exec_cmd("overskride"))
+hl.bind("SUPER + N", hl.dsp.exec_cmd("/opt/winboat/winboat"))
 
 -- Clipboard history: note that the original shortcut is SUPER+C, not SUPER+V.
 hl.bind("SUPER + C", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"))
